@@ -67,8 +67,9 @@ std::string CalculoPrestamo::reporteCalculoPrestamo(std::string tiempoTXT,std::s
     std::string tasa;
 
     for (int i=0; i <= meses; i++) {
-        std::cout<<"Tasa ("<<porcentajeTXT<<"), Mes ("<<i<<"), balance inicial ("<<balance1<<"), interes ("<<interes<<"), balance nuevo ("<<balance2<<std::endl;
+        tasa = tasa +"Tasa ("+ porcentajeTXT + "), Mes ("+std::to_string(i+1)+"), balance inicial ("+std::to_string(balance1)+"), interes ("+std::to_string(interes)+"), balance nuevo ("+std::to_string(balance2)+")\n";
         balance1 = balance2;
     }
+    return tasa;
 }
 
